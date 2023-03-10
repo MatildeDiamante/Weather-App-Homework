@@ -33,7 +33,9 @@ li:first-letter {
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
-/* .overview missing */
+.overview {
+  margin-bottom: 20px;
+}
 .weather-temperature img {
   margin-right: 5px;
   height: 64px;
