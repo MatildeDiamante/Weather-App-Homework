@@ -18,17 +18,17 @@
     <div class="container">
       <div class="weather-app-wrap">
         <div class="border-around">
-          <h1>Udine</h1>
+          <h1 id="city"></h1>
           <ul>
             <li>Last update: Friday 18:45<span></span></li>
-            <li>Clear</li>
+            <li id="description"></li>
           </ul>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
                 <img src="#" alt="Clear" id="icon" />
                 <div>
-                  <strong id="temperature">13 </strong>
+                  <strong id="temperature"></strong>
                   <span class="units">°C | °F</span>
                 </div>
               </div>
@@ -36,8 +36,8 @@
 
             <div class="col-6">
               <ul>
-                <li>Humidity: 40%</li>
-                <li>Wind: 0 km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
