@@ -43,6 +43,19 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "46108c2f44aed2b9456dfc37c161b607";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Udine&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showTemperature);
+function search(city) {
+  let apiKey = "46108c2f44aed2b9456dfc37c161b607";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function controlSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#form-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", controlSubmit);
+
+search("Udine");
